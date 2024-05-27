@@ -1,4 +1,3 @@
-import 'package:calculator_app_test/modules/onboarding/presentation/widgets/page_view_item.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -67,52 +66,56 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Color(0xffe6ede7), body: Column( children: [
-      SizedBox(
-                height: screenHeight * 0.6798,
-                child: PageView(
-                  clipBehavior: Clip.none,
-                  controller: _pageController,
-                  onPageChanged: _onPageChanged,
-                  physics: const ClampingScrollPhysics(),
-                  children: [
-                    PageViewItem(
-                      image: firstPageItemInfo['image']!,
-                      firstBlueHighlightedText:
-                          firstPageItemInfo['firstBlueHighlightedText']!,
-                      redHighlightedText:
-                          firstPageItemInfo['redHighlightedText']!,
-                      secondBlueHighlightedText:
-                          firstPageItemInfo['secondBlueHighlightedText']!,
-                      description: firstPageItemInfo['description']!,
-                      screenHeight: screenHeight,
-                    ),
-                    PageViewItem(
-                      image: secondPageItemInfo['image']!,
-                      firstBlueHighlightedText:
-                          secondPageItemInfo['firstBlueHighlightedText']!,
-                      redHighlightedText:
-                          secondPageItemInfo['redHighlightedText']!,
-                      secondBlueHighlightedText:
-                          secondPageItemInfo['secondBlueHighlightedText']!,
-                      description: secondPageItemInfo['description']!,
-                      screenHeight: screenHeight,
-                    ),
-                    PageViewItem(
-                      image: thirdPageItemInfo['image']!,
-                      firstBlueHighlightedText:
-                          thirdPageItemInfo['firstBlueHighlightedText']!,
-                      redHighlightedText:
-                          thirdPageItemInfo['redHighlightedText']!,
-                      secondBlueHighlightedText:
-                          thirdPageItemInfo['secondBlueHighlightedText']!,
-                      description: thirdPageItemInfo['description']!,
-                      screenHeight: screenHeight,
-                    ),
-             
-                  ],
-                ),
-              ),
-    ],),);
+    return const Scaffold(
+      backgroundColor: Color(0xffe6ede7),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text('Onboarding flow here', style: TextStyle(fontSize: 24),)
+          // SizedBox(
+          //   height: screenHeight * 0.6798,
+          //   child: PageView(
+          //     clipBehavior: Clip.none,
+          //     controller: _pageController,
+          //     onPageChanged: _onPageChanged,
+          //     physics: const ClampingScrollPhysics(),
+          //     children: [
+          //       PageViewItem(
+          //         image: firstPageItemInfo['image']!,
+          //         firstBlueHighlightedText:
+          //             firstPageItemInfo['firstBlueHighlightedText']!,
+          //         redHighlightedText: firstPageItemInfo['redHighlightedText']!,
+          //         secondBlueHighlightedText:
+          //             firstPageItemInfo['secondBlueHighlightedText']!,
+          //         description: firstPageItemInfo['description']!,
+          //         screenHeight: screenHeight,
+          //       ),
+          //       PageViewItem(
+          //         image: secondPageItemInfo['image']!,
+          //         firstBlueHighlightedText:
+          //             secondPageItemInfo['firstBlueHighlightedText']!,
+          //         redHighlightedText: secondPageItemInfo['redHighlightedText']!,
+          //         secondBlueHighlightedText:
+          //             secondPageItemInfo['secondBlueHighlightedText']!,
+          //         description: secondPageItemInfo['description']!,
+          //         screenHeight: screenHeight,
+          //       ),
+          //       PageViewItem(
+          //         image: thirdPageItemInfo['image']!,
+          //         firstBlueHighlightedText:
+          //             thirdPageItemInfo['firstBlueHighlightedText']!,
+          //         redHighlightedText: thirdPageItemInfo['redHighlightedText']!,
+          //         secondBlueHighlightedText:
+          //             thirdPageItemInfo['secondBlueHighlightedText']!,
+          //         description: thirdPageItemInfo['description']!,
+          //         screenHeight: screenHeight,
+          //       ),
+          //     ],
+          //   ),
+          // ),
+        ],
+      ),
+    );
   }
 }

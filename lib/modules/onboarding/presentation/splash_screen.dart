@@ -1,3 +1,4 @@
+import 'package:calculator_app_test/modules/onboarding/presentation/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen>
     _animation = Tween<double>(begin: 0, end: 1).animate(_controller);
 
     Future.delayed(const Duration(seconds: 5)).then((_) {
-      //     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => NextScreen()));
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => const OnboardingScreen()));
     });
   }
 
